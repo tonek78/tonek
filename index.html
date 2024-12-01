@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rádiók</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="css/myCast.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+
+                <i class="bi bi-broadcast-pin" style="font-size: 2rem; color: cornflowerblue;"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="container text-center">
+        <div class="row" style="margin-top:10px;">
+
+
+            <div class="col-sm">
+                <div class="myCast" id="stream1"></div>
+            </div>
+
+            <div class="col-sm">
+                <div class="myCast" id="stream2"></div>
+            </div>
+            <div class="col-sm">
+                <div class="myCast" id="stream3"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="js/myCast.min.js"></script>
+    <script>
+
+        $("#stream1").myCast({
+            URL: "https://streams.90s90s.de/sachsenradio/mp3-192/",
+            version: "1",
+            mount_point: "autodj",
+            enable_cors: true,
+            bg: "blue",
+            accent: "amber",
+            lang: "es",
+            blur: true,
+            blur_opacity: 0.16
+        });
+
+        $("#stream2").myCast({
+            URL: "https://stream.sunshine-live.de/live/mp3-192/stream.sunshine-live.de",
+            version: "1",
+            mount_point: "autodj",
+            enable_cors: true,
+            bg: "blue",
+            accent: "amber",
+            lang: "es",
+            blur: true,
+            blur_opacity: 0.16
+        });
+
+        $("#stream3").myCast({
+            URL: "https://icast.connectmedia.hu/5202/live.mp3",
+            version: "1",
+            mount_point: "autodj",
+            enable_cors: true,
+            bg: "blue",
+            accent: "amber",
+            lang: "es",
+            blur: true,
+            blur_opacity: 0.16
+        });
+    </script>
+
+</body>
+
+</html>
